@@ -11,7 +11,7 @@ Pentora is a terminal-first web vulnerability scanner designed for speed and ver
 
 1. **Clone the repository** (or copy the project files):
    ```bash
-   git clone https://github.com/pentora/pentora.git
+https://github.com/AJ4Y-KRISHNA/Pentora.git
    cd pentora
    ```
 
@@ -51,3 +51,4 @@ Discover subdomains and assets for a given domain:
 
 ## 📄 Reporting
 Reports are automatically generated in both `Markdown` and `JSON` formats upon completion of a scan.
+
