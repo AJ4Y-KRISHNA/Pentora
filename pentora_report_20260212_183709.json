@@ -1,0 +1,388 @@
+{
+  "target": "https://stores.maxfashion.in/",
+  "findings": [
+    {
+      "id": "",
+      "name": "Missing Content-Security-Policy",
+      "description": "The application is missing the Content-Security-Policy header. XSS mitigation",
+      "severity": "Low",
+      "url": "https://www.maxfashion.in/?utm_source=store_locator\u0026utm_medium=brand_website",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "PENTORA-A03-61639851",
+      "name": "A03: SSTI (Verified)",
+      "description": "Server-Side Template Injection confirmed in parameter 'utm_medium'.",
+      "severity": "Critical",
+      "url": "https://www.maxfashion.in/?utm_medium=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D\u0026utm_source=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains: ...49...",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://www.maxfashion.in/?utm_medium=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D\u0026utm_source=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Ensure user input is not passed directly to template engine evaluation functions."
+    },
+    {
+      "id": "",
+      "name": "Missing X-Content-Type-Options",
+      "description": "The application is missing the X-Content-Type-Options header. MIME sniffing protection",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=3807143605547289738",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing Content-Security-Policy",
+      "description": "The application is missing the Content-Security-Policy header. XSS mitigation",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=3807143605547289738",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing X-Content-Type-Options",
+      "description": "The application is missing the X-Content-Type-Options header. MIME sniffing protection",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=18363970345810965115",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing Content-Security-Policy",
+      "description": "The application is missing the Content-Security-Policy header. XSS mitigation",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=18363970345810965115",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing X-Content-Type-Options",
+      "description": "The application is missing the X-Content-Type-Options header. MIME sniffing protection",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=17888676887170391015",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing Content-Security-Policy",
+      "description": "The application is missing the Content-Security-Policy header. XSS mitigation",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=17888676887170391015",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing X-Content-Type-Options",
+      "description": "The application is missing the X-Content-Type-Options header. MIME sniffing protection",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=14945508084033765648",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing Content-Security-Policy",
+      "description": "The application is missing the Content-Security-Policy header. XSS mitigation",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=14945508084033765648",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing X-Content-Type-Options",
+      "description": "The application is missing the X-Content-Type-Options header. MIME sniffing protection",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=14738963625153646159",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing Content-Security-Policy",
+      "description": "The application is missing the Content-Security-Policy header. XSS mitigation",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=14738963625153646159",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "PENTORA-A03-cc69d968",
+      "name": "A03: SSTI (Verified)",
+      "description": "Server-Side Template Injection confirmed in parameter 'cid'.",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains: ...49...",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Ensure user input is not passed directly to template engine evaluation functions."
+    },
+    {
+      "id": "PENTORA-A03-af5ea576",
+      "name": "A03: SQL Injection (Verified)",
+      "description": "SQL error triggered in parameter 'cid'",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains error signature: syntax error",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Use parameterized queries (Prepared Statements) for all database access."
+    },
+    {
+      "id": "PENTORA-A03-cc69d968",
+      "name": "A03: SSTI (Verified)",
+      "description": "Server-Side Template Injection confirmed in parameter 'cid'.",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains: ...49...",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Ensure user input is not passed directly to template engine evaluation functions."
+    },
+    {
+      "id": "PENTORA-A03-af5ea576",
+      "name": "A03: SQL Injection (Verified)",
+      "description": "SQL error triggered in parameter 'cid'",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains error signature: syntax error",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Use parameterized queries (Prepared Statements) for all database access."
+    },
+    {
+      "id": "PENTORA-A03-cc69d968",
+      "name": "A03: SSTI (Verified)",
+      "description": "Server-Side Template Injection confirmed in parameter 'cid'.",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains: ...49...",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Ensure user input is not passed directly to template engine evaluation functions."
+    },
+    {
+      "id": "PENTORA-A03-af5ea576",
+      "name": "A03: SQL Injection (Verified)",
+      "description": "SQL error triggered in parameter 'cid'",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains error signature: syntax error",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Use parameterized queries (Prepared Statements) for all database access."
+    },
+    {
+      "id": "PENTORA-A03-cc69d968",
+      "name": "A03: SSTI (Verified)",
+      "description": "Server-Side Template Injection confirmed in parameter 'cid'.",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains: ...49...",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Ensure user input is not passed directly to template engine evaluation functions."
+    },
+    {
+      "id": "PENTORA-A03-af5ea576",
+      "name": "A03: SQL Injection (Verified)",
+      "description": "SQL error triggered in parameter 'cid'",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains error signature: syntax error",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Use parameterized queries (Prepared Statements) for all database access."
+    },
+    {
+      "id": "PENTORA-A03-cc69d968",
+      "name": "A03: SSTI (Verified)",
+      "description": "Server-Side Template Injection confirmed in parameter 'cid'.",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains: ...49...",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Ensure user input is not passed directly to template engine evaluation functions."
+    },
+    {
+      "id": "PENTORA-A03-af5ea576",
+      "name": "A03: SQL Injection (Verified)",
+      "description": "SQL error triggered in parameter 'cid'",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains error signature: syntax error",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Use parameterized queries (Prepared Statements) for all database access."
+    },
+    {
+      "id": "",
+      "name": "Missing X-Content-Type-Options",
+      "description": "The application is missing the X-Content-Type-Options header. MIME sniffing protection",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=17773919579258714890",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing Content-Security-Policy",
+      "description": "The application is missing the Content-Security-Policy header. XSS mitigation",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=17773919579258714890",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "PENTORA-A03-cc69d968",
+      "name": "A03: SSTI (Verified)",
+      "description": "Server-Side Template Injection confirmed in parameter 'cid'.",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains: ...49...",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Ensure user input is not passed directly to template engine evaluation functions."
+    },
+    {
+      "id": "PENTORA-A03-af5ea576",
+      "name": "A03: SQL Injection (Verified)",
+      "description": "SQL error triggered in parameter 'cid'",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains error signature: syntax error",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Use parameterized queries (Prepared Statements) for all database access."
+    },
+    {
+      "id": "",
+      "name": "Missing X-Content-Type-Options",
+      "description": "The application is missing the X-Content-Type-Options header. MIME sniffing protection",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=17936392465014861882",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing Content-Security-Policy",
+      "description": "The application is missing the Content-Security-Policy header. XSS mitigation",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=17936392465014861882",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "PENTORA-A03-cc69d968",
+      "name": "A03: SSTI (Verified)",
+      "description": "Server-Side Template Injection confirmed in parameter 'cid'.",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains: ...49...",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Ensure user input is not passed directly to template engine evaluation functions."
+    },
+    {
+      "id": "PENTORA-A03-af5ea576",
+      "name": "A03: SQL Injection (Verified)",
+      "description": "SQL error triggered in parameter 'cid'",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains error signature: syntax error",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Use parameterized queries (Prepared Statements) for all database access."
+    },
+    {
+      "id": "",
+      "name": "Missing X-Content-Type-Options",
+      "description": "The application is missing the X-Content-Type-Options header. MIME sniffing protection",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=9734559363389444523",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "",
+      "name": "Missing Content-Security-Policy",
+      "description": "The application is missing the Content-Security-Policy header. XSS mitigation",
+      "severity": "Low",
+      "url": "https://maps.google.com/maps?cid=9734559363389444523",
+      "evidence": "",
+      "proof": "Header not present in response",
+      "verified": false,
+      "remediation": "Implement strict input validation and follow the principle of least privilege."
+    },
+    {
+      "id": "PENTORA-A03-cc69d968",
+      "name": "A03: SSTI (Verified)",
+      "description": "Server-Side Template Injection confirmed in parameter 'cid'.",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains: ...49...",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Ensure user input is not passed directly to template engine evaluation functions."
+    },
+    {
+      "id": "PENTORA-A03-af5ea576",
+      "name": "A03: SQL Injection (Verified)",
+      "description": "SQL error triggered in parameter 'cid'",
+      "severity": "Critical",
+      "url": "https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D",
+      "evidence": "Response contains error signature: syntax error",
+      "proof": "curl -i -s -L -H 'User-Agent: Pentora/1.0' -X GET 'https://maps.google.com/maps?cid=%27%22%3Cscript%3Econfirm%281%29%3C%2Fscript%3E%7B%7B7%2A7%7D%7D'",
+      "verified": true,
+      "remediation": "Use parameterized queries (Prepared Statements) for all database access."
+    }
+  ],
+  "attack_path": {
+    "narrative": "The presence of SQL Injection allows an attacker to bypass authentication and directly exfiltrate the database. Combined with discovered endpoints, this could lead to full administrative takeover.",
+    "steps": [
+      "1. Bypass authentication using identified SQLi vector.",
+      "2. Dump 'users' table to obtain administrative credentials.",
+      "3. Log in as administrator and achieve RCE via file upload/template editing."
+    ],
+    "risk_level": "Critical"
+  }
+}
